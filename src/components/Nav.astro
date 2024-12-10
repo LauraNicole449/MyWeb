@@ -15,7 +15,7 @@ const navURLs = [
             <a href={item.path} class={`navLink ${Astro.props.alias === item.alias ? "selected" : ""}`}>
               <span>
                 <img
-                  src={Astro.props.alias === item.alias ? `/icons/selected/${item.icon}` : item.icon }
+                  src={Astro.props.alias === item.alias ? `/icons/selected/${item.icon}` : `/icons/${item.icon}` }
                   alt={item.alias}/>
               </span>
               <span>{item.alias}</span>
