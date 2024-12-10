@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav aria-label="Main navigation">
+        <ul class="navBar">
+            <li class="navItem">
+                <a href="/" class={`navLink ${Astro.url.pathname === "/" ? "selected" : ""}`}>
+                    <span><img src={Astro.url.pathname === "/" ? "/../public/icons/selected/Home.svg" : "/../public/icons/Home.svg" }  alt="Home"></span>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="navItem">
+                <a href="/resume" class={`navLink ${Astro.url.pathname === "/resume" ? "selected" : ""}`}>
+                    <span><img src={Astro.url.pathname === "/resume" ? "/../public/icons/selected/Resume.svg" : "/../public/icons/Resume.svg" }  alt="Home"></span>
+                    <span>Resume</span>
+                </a>
+            </li>
+            <li class="navItem">
+                <a href="/work" class={`navLink ${Astro.url.pathname === "/work" ? "selected" : ""}`}>
+                    <span><img src={Astro.url.pathname === "/work" ? "/../public/icons/selected/Work.svg" : "/../public/icons/Work.svg" }  alt="Home"></span>
+                    <span>Work</span>
+                </a>
+            </li>
+            <li class="navItem">
+                <a href="/contact" class={`navLink ${Astro.url.pathname === "/contact" ? "selected" : ""}`}>
+                    <span><img src={Astro.url.pathname === "/contact" ? "/../public/icons/selected/Contact.svg" : "/../public/icons/Contact.svg" }  alt="Contact"></span>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
+
