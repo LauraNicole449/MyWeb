@@ -1,28 +1,30 @@
-<nav aria-label="Main navigation">
+---
+const navURLs = [
+  {alias: "Home", path: "/", icon: "Home.svg"},
+  {alias: "Resume", path: "/resume", icon: "Resume.svg"},
+  {alias: "Work", path: "/work", icon: "Work.svg"},
+  {alias: "Contact", path: "/contact", icon: "Contact.svg"}
+]
+---
+
+<nav>
     <ul class="navBar">
-        <li class="navItem">
-            <a href="/" class={`navLink ${Astro.url.pathname === "/" ? "selected" : ""}`}>
-                <span><img src={Astro.url.pathname === "/" ? "/icons/selected/Home.svg" : "/icons/Home.svg" }  alt="Home"></span>
-                <span>Home</span>
+      {
+        navURLs.map(item =>
+          <li class="navItem">
+            <a href={item.path} class={`navLink ${Astro.props.alias === item.alias ? "selected" : ""}`}>
+              <span>
+                <img
+                  src={Astro.props.alias === item.alias ? `/icons/selected/${item.icon}` : item.icon }
+                  alt={item.alias}/>
+              </span>
+              <span>{item.alias}</span>
             </a>
-        </li>
-        <li class="navItem">
-            <a href="/resume" class={`navLink ${Astro.url.pathname === "/resume" ? "selected" : ""}`}>
-                <span><img src={Astro.url.pathname === "/resume" ? "/icons/selected/Resume.svg" : "/icons/Resume.svg" }  alt="Home"></span>
-                <span>Resume</span>
-            </a>
-        </li>
-        <li class="navItem">
-            <a href="/work" class={`navLink ${Astro.url.pathname === "/work" ? "selected" : ""}`}>
-                <span><img src={Astro.url.pathname === "/work" ? "/icons/selected/Work.svg" : "/icons/Work.svg" }  alt="Home"></span>
-                <span>Work</span>
-            </a>
-        </li>
-        <li class="navItem">
-            <a href="/contact" class={`navLink ${Astro.url.pathname === "/contact" ? "selected" : ""}`}>
-                <span><img src={Astro.url.pathname === "/contact" ? "/icons/selected/Contact.svg" : "/icons/Contact.svg" }  alt="Contact"></span>
-                <span>Contact</span>
-            </a>
-        </li>
+            <div>
+                
+            </div>
+          </li>
+        )
+      }
     </ul>
 </nav>
