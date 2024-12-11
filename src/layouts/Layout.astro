@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 	</head>
 	<body>
 		<slot />
@@ -13,7 +14,7 @@ body {
     margin: 0;
     color: black;
 	background-color: #F2F5F9;
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway";
 }
 
 nav {
@@ -46,7 +47,7 @@ nav {
 }
 .selected{
 	
-	background: linear-gradient(90deg, rgba(255,156,26,1) 0%, rgba(232,5,5,1) 35%);
+	background-image: linear-gradient(90deg, rgba(255,156,26,1) 0%, rgba(232,5,5,1) 85%);
 	color: white;
 }
 a {
@@ -84,6 +85,8 @@ aside{
 }
 .card{
 	text-align: center;
+	transform: translate(55%, 10%);
+	border: 2px solid black;
 }
 .container {
     display: flex;
@@ -95,8 +98,53 @@ aside{
 .socials {
     width: 65px; /* Set a fixed width or use your desired width */
     height: 65px; /* Set a fixed height or use your desired height */
-    background-color: lightblue; /* Optional: For better visibility */
+    background-color: #F2F5F9; /* Optional: For better visibility */
+	border-radius: 9px;
 }
+._desc{
+	width: 350px;
+	height: 360px;
+	background-color: #F2F5F9;
+	margin:25px;
+	border-radius: 20px;
+}
+._desc p{
+	word-wrap: break-word; /* Rompe las palabras largas */
+	overflow-wrap: break-word;
+	margin: 26px;
+	padding-top: 26px;
+	
+  
+}
+#avatar{
+	
+	transform: translate(0%, -50%);
+}
+._allCard{
+	transform: translate(0%, -20%);
+}
+#resume{
+	width: 285px;
+	height: 44px;
+	background-image: linear-gradient(90deg, rgba(255,156,26,1) 0%, rgba(232,5,5,1) 95%);
+	padding: 12px;
 
+	padding-right: 18px;
+	color:white;
+	font-weight: 600;
+	border-radius: 20px;
+	transform: translate(20%,55%);
+}
+#_download{
+	padding-right: 12px;
+	padding-left: 12px;
+	padding-bottom: -8px;
+	transform: translate(0%, 5%);
+}
+article{
+	width: 940px;
+	height: 720px;
+	background-color: orange;
+	transform: translate(70%, -88%);
+}
 </style>
-
