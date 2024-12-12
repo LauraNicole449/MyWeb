@@ -8,6 +8,16 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<Nav alias="Contact"/>
-	<Profile />
-	<Content />
+	<div class="container">
+		<Profile />
+		<Content />
+	</div>
 </Layout>
+
+<style>
+	.container {
+		display: flex; 
+		justify-content: center;
+		column-gap: 0.5rem;
+	}
+</style>
