@@ -1,22 +1,17 @@
 ---
 const textURLs = [
-  {alias: "Home", path: "/", text: "ABOUT ME"},
-  {alias: "Resume", path: "/resume", text: "Resume"},
-  {alias: "Work", path: "/work", text: "Work"},
-  {alias: "Contact", path: "/contact", text: "Afor troncha"}
+  {alias: "Home", path: "/"},
+  {alias: "Resume", path: "/resume"},
+  {alias: "Work", path: "/work"},
+  {alias: "Contact", path: "/contact"}
 ]
 const currentPath = Astro.url.pathname;
 ---
 
 <article>
-  {
-    textURLs.map(item => (
-      <h1> 
-        {currentPath === item.path? ` ${item.text}` : "1"}
-      </h1>
-    ))
-  }
-  <div></div>
+  <slot>
+  
+  </slot>
 </article>
 
 
@@ -27,25 +22,9 @@ article{
 	background-color: white;
 	border: 2px solid black;
 	border-radius: 20px;
+  padding: 75px;
+  padding-top: 0;
 }
-.masivo1{
-  width: 90px;
-  height: 90px;
-  background-color: orange;
-}
-.masivo2{
-  width: 40px;
-  height: 40px;
-  background-color: blue;
-}
-.masivo3{
-  width: 40px;
-  height: 40px;
-  background-color: red;
-}
-.masivo4{
-  width: 40px;
-  height: 40px;
-  background-color: green;
-}
+
+
 </style>

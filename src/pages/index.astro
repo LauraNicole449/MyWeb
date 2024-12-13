@@ -3,21 +3,54 @@ import Nav from '../components/Nav.astro';
 import Profile from '../components/Profile.astro';
 import Content from '../components/Content.astro';
 import Layout from '../layouts/Layout.astro';
-
 ---
 
 <Layout>
 	<Nav alias="Home"/>
 	<div class="container">
 		<Profile />
-		<Content />
+		
+		<Content>
+			<h1>ABOUT ME</h1>
+			<p>
+				Hello there! I'm thrilled to welcome you to my portfolio. I am a passionate and versatile
+				FrontEnd developer with a keen interest in exploring the latest cutting-edge technologies.
+				My journey in the world of web development has been nothing short of exhilarating, and 
+				I constantly strive to enhance my skills and embrace emerging trends in the industry.
+			</p>
+			<h2>What i do!</h2>
+			<div class="cards">
+			
+			</div>
+			<div class="cards">
+
+			</div>
+			<div class="cards">
+
+			</div>
+			<div class="cards">
+
+			</div>
+		</Content>
 	</div>
 </Layout>
 
 <style>
-	.container {
-		display: flex; 
-		justify-content: center;
-		column-gap: 0.5rem;
-	}
+.container {
+	display: flex; 
+	justify-content: center;
+	column-gap: 0.5rem;
+}
+h1{
+  font-size: 35px;
+}
+
+.cards{
+	width: 420px;
+	height: 175px;
+	top: 300px;
+	background-color: orange;
+	margin: 20px;
+	display: inline-block;
+}
 </style>
