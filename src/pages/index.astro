@@ -12,7 +12,7 @@ import Layout from '../layouts/Layout.astro';
 		
 		<Content>
 			<h1>ABOUT ME</h1>
-			<p>
+			<p class="text">
 				Hello there! I'm thrilled to welcome you to my portfolio. I am a passionate and versatile
 				FrontEnd developer with a keen interest in exploring the latest cutting-edge technologies.
 				My journey in the world of web development has been nothing short of exhilarating, and 
@@ -20,16 +20,41 @@ import Layout from '../layouts/Layout.astro';
 			</p>
 			<h2>What i do!</h2>
 			<div class="cards">
-			
+				<h3><img src="/icons/Code.svg" alt="Code">Web Development</h3>
+				<p class="textSection">
+					As a developer, I find myself most captivated by the power and flexibility of HTML, CSS and JavaScript.
+					I'm always eager to dive into new projects and discover innovative ways to create fast, scalable, and user-friendly applications.
+				</p>
 			</div>
 			<div class="cards">
-
+				<h3><img src="/icons/Insta.svg" alt="Insta">App development</h3>
+				<p class="textSection">
+					With a focus on user-centric design and
+					cutting-edge technologies, I thrive on 
+					building intuitive and efficient apps that 
+					make a positive impact on people's lives.
+					Let's turn ideas into reality and shape
+					the future together.
+				</p>
 			</div>
 			<div class="cards">
-
+				<h3 class="_aa"><img src="/icons/UX.svg" alt="UX">UI/UX Designing</h3>
+				<p class="textSection">
+					Crafting visually appealing and intuitive user
+					interfaces that offer a delightful user 
+					experience is something I'm truly fanatic 
+					about.
+				</p>
 			</div>
 			<div class="cards">
-
+				<h3><img src="/icons/Mentor.svg" alt="Mentor">Mentorship</h3>
+				<p class="textSection">
+					I have also found great joy in sharing my 
+					knowledge with others. Being a technical 
+					mentor allows me to give back to the 
+					community that has supported me 
+					throughout my career. 
+				</p>
 			</div>
 		</Content>
 	</div>
@@ -42,15 +67,40 @@ import Layout from '../layouts/Layout.astro';
 	column-gap: 0.5rem;
 }
 h1{
-  font-size: 35px;
+  font-size: 40px;
+}
+h2{
+	margin-top: 50px;
+	font-size: 32px;
+}
+h3{
+	margin:20px;
+	font-size: 24px;
 }
 
+._aa{
+	margin-top: 38px;
+}
+img{
+	margin-right: 10px;
+}
 .cards{
 	width: 420px;
 	height: 175px;
 	top: 300px;
-	background-color: orange;
-	margin: 20px;
+	background-color: #FFEBD1;
+	margin: 12px;
 	display: inline-block;
+	border-radius: 20px;
+}
+.cards:nth-of-type(2),.cards:nth-of-type(3){
+	background-color: #F2F7FC ;
+}
+.textSection{
+	margin:20px;
+}
+.text{
+	line-height: 30px;
+	margin: 0px;
 }
 </style>
