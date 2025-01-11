@@ -12,19 +12,45 @@ import Layout from '../layouts/Layout.astro';
 		<Profile />
 		<Content>
 			<h1>Resume</h1>
-			<h2>Education</h2>
-			<h2>Experience</h2>
-			<div>
-
+			<h2 class="_a"><img src="/icons/Hat.svg" alt="Hat">Education</h2>
+			<h2><img src="/icons/Maletin.svg" alt="Maletin">Experience</h2>
+			<div class="_box">
+				<p class="fecha">2024-Present</p>
+				<h4>Web Applications Development</h4>
+				<p class="location">IES Mare Nostrum</p>
 			</div>
-			<div>
-
+			<div class="_box">
+				<p class="fecha">2024-Present</p>
+				<h4>Web Applications Development</h4>
+				<p class="location">IES Mare Nostrum</p>
 			</div>
-			<div>
-
+			<div class="_box">
+				<p class="fecha">2019-2021</p>
+				<h4>Microcomputer Systems and Networks</h4>
+				<p class="location">IES Mare Nostrum</p>
 			</div>
-			<div>
-				
+			<div class="_box">
+				<p class="fecha">2024-Present</p>
+				<h4>Web Applications Development</h4>
+				<p class="location">IES Mare Nostrum</p>
+			</div>
+
+			<h2 class="_a habilidadesTitle">Work Skills</h2>
+			<h2 class="_b habilidadesTitle">Soft Skills</h2>
+			<div class="tree treeWork">
+				<p>HTML 5</p>
+				<p>Astro</p>
+				<p>CCS 3</p>
+				<p>JavaScript</p>
+				<p>Figma</p>
+				<p>Git</p>
+			</div>
+			<div class="tree">
+				<p>Impeccable communication</p>
+				<p>Time manager</p>
+				<p>Flexibility</p>
+				<p>Adaptability</p>
+				<p>Problem Solving</p>
 			</div>
 		</Content>
 	</div>
@@ -36,12 +62,90 @@ import Layout from '../layouts/Layout.astro';
 	justify-content: center;
 	column-gap: 0.5rem;
 }
-h1{
-  font-size: 40px;
+img{
+	padding-right: 10px;
+	width: 30px;
 }
-div{
-	height: 115px;
-	width: 288px;
-	background-color: blue;
+h1{
+	font-weight: 500;
+	margin-bottom: 20px;
+	margin-top: 20px;
+  	font-size: 40px;
+}
+._a{
+	padding-left:20px;
+}
+._b{
+	padding-left: 215px;
+}
+h2{
+	margin-bottom: 10px;
+	margin-top: 0;
+	font-weight: 500;
+	font-size: 30px;
+	display: inline-block;
+	padding-left:190px;
+	padding-right: 40px;
+}
+.fecha{
+	font-size: 15px;
+	padding-top: 10px;
+	opacity: 0.5;
+}
+.habilidadesTitle{
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+.tree{
+	margin-top: 0;
+	display: inline-block;
+
+	width: 370px;
+	height: 180px;
+	margin-right: 20px;
+}
+.tree p{
+	background-color: #E1E8EF;
+	padding: 11px;
+	padding-left: 15px;
+	padding-right: 15px;
+    max-width: 300px; 
+	margin: 0; 
+	display: inline-block;
+	margin: 7px;
+	border-radius: 11px;
+}
+.treeWork{
+	width: 250px;
+	margin-left: 20px;
+	margin-right: 190px;
+}
+h4{
+	font-weight: 500;
+	font-size: 15px;
+}
+p,h4{
+	padding: 1px;
+	padding-top: 5px;
+	margin: 5px;
+}
+._box:nth-of-type(3),._box:nth-of-type(2){
+	background-color: #FFEED9;
+}
+._box{
+	display: inline-block;
+	margin-bottom: 20px;
+	margin-right: 69px;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-left: 10px;
+	border-radius: 10px;
+	height: 120px;
+	width: 358px;
+	background-color: #FFE3BF;
+}
+.location{
+	margin-top: 5px;
+	font-size: 14px;
 }
 </style>

@@ -10,14 +10,60 @@ import Layout from '../layouts/Layout.astro';
 	<Nav alias="Work"/>
 	<div class="container">
 		<Profile />
-		<Content />
+		<Content>
+			<h1>Portfolio</h1>
+			<nav>
+				<ul>
+					<li class="selectOption">
+						All
+					</li>
+					<li>
+						My projects
+					</li>
+					<li>
+						Participated projects
+					</li>
+				</ul>
+			</nav>
+			<section class="projects">
+				<img src="/icons/Maletin.svg" alt="Smart">
+				<p>Participated proyect</p>
+				<h3>Smart Bank</h3>
+			</section>
+		</Content>
 	</div>
 </Layout>
 
 <style>
-	.container {
-		display: flex; 
-		justify-content: center;
-		column-gap: 0.5rem;
-	}
+.container {
+	display: flex; 
+	justify-content: center;	
+	column-gap: 0.5rem;
+}
+h1{
+	font-weight: 650;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+  	font-size: 50px;
+}
+ 
+li{
+	list-style:none;
+	display: inline-block;
+	padding: 10px;
+	color: #57657A;
+	font-weight: 550;
+}
+ul{
+	margin-left: 400px;
+}
+.selectOption{
+	color: #FA5252;
+}
+.projects{
+	width: 350px;
+	height: 170px;
+	background-color: orange;
+}
 </style>

@@ -12,7 +12,7 @@ import Layout from '../layouts/Layout.astro';
 		
 		<Content>
 			<h1>ABOUT ME</h1>
-			<p class="text">
+			<p class="textDescription">
 				Hello there! I'm thrilled to welcome you to my portfolio. I am a passionate and versatile
 				FrontEnd developer with a keen interest in exploring the latest cutting-edge technologies.
 				My journey in the world of web development has been nothing short of exhilarating, and 
@@ -27,7 +27,7 @@ import Layout from '../layouts/Layout.astro';
 				</p>
 			</div>
 			<div class="cards">
-				<h3><img src="/icons/Insta.svg" alt="Insta">App development</h3>
+				<h3><img src="/icons/Insta.svg" alt="Insta" class="icons">App development</h3>
 				<p class="textSection">
 					With a focus on user-centric design and
 					cutting-edge technologies, I thrive on 
@@ -38,8 +38,8 @@ import Layout from '../layouts/Layout.astro';
 				</p>
 			</div>
 			<div class="cards">
-				<h3 class="_aa"><img src="/icons/UX.svg" alt="UX">UI/UX Designing</h3>
-				<p class="textSection">
+				<h3 class="_aa"><img src="/icons/UX.svg" alt="UX" class="icons">UI/UX Designing</h3>
+				<p class="textSection _b">
 					Crafting visually appealing and intuitive user
 					interfaces that offer a delightful user 
 					experience is something I'm truly fanatic 
@@ -47,7 +47,7 @@ import Layout from '../layouts/Layout.astro';
 				</p>
 			</div>
 			<div class="cards">
-				<h3><img src="/icons/Mentor.svg" alt="Mentor">Mentorship</h3>
+				<h3><img src="/icons/Mentor.svg" alt="Mentor" class="icons">Mentorship</h3>
 				<p class="textSection">
 					I have also found great joy in sharing my 
 					knowledge with others. Being a technical 
@@ -61,33 +61,36 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+
 .container {
 	display: flex; 
 	justify-content: center;
 	column-gap: 0.5rem;
 }
 h1{
-  font-size: 40px;
+	font-weight: 500;
+	margin-bottom: 20px;
+	margin-top: 20px;
+  	font-size: 40px;
 }
 h2{
-	margin-top: 50px;
-	font-size: 32px;
+	margin-top: 40px;
+	font-size: 35px;
+	font-weight: 500;
 }
 h3{
-	margin:20px;
+	margin-bottom: 5px;
+	margin-top: 15px;
 	font-size: 24px;
 }
 
-._aa{
-	margin-top: 38px;
-}
 img{
 	margin-right: 10px;
+	margin-left: 15px;
 }
 .cards{
 	width: 420px;
 	height: 175px;
-	top: 300px;
 	background-color: #FFEBD1;
 	margin: 12px;
 	display: inline-block;
@@ -96,11 +99,25 @@ img{
 .cards:nth-of-type(2),.cards:nth-of-type(3){
 	background-color: #F2F7FC ;
 }
-.textSection{
-	margin:20px;
+
+.icons{
+transform: translate(5%, 10%);
 }
-.text{
+.cards:nth-of-type(3){
+	padding-top: 19px;
+	height: 156px;
+}
+.textSection{
+	padding-top: 0;
+	margin-top: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 14px;
+	
+}
+
+.textDescription{
 	line-height: 30px;
-	margin: 0px;
+	font-size: 16px;
 }
 </style>
