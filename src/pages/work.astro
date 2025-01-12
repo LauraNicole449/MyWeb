@@ -25,16 +25,23 @@ import Layout from '../layouts/Layout.astro';
 					</li>
 				</ul>
 			</nav>
-			<section class="projects">
-				<img src="/images/projects/FaviconGenerator.png" alt="favicon">
-				<p>Participated proyects</p>
-				<h3>Favicon Generator</h3>
-			</section>
+			<a href="https://github.com/afordigital/favicon-generator" target="_blank">
+				<section class="projects" >
+					<img src="/images/projects/FaviconGenerator.png" alt="favicon">
+					<p>Participated proyects</p>
+					<h3>Favicon Generator</h3>
+				</section>
+			</a>
+			
 		</Content>
 	</div>
 </Layout>
 
 <style>
+a{
+	text-decoration: none;
+	color: black;
+}
 .container {
 	display: flex; 
 	justify-content: center;	
@@ -47,15 +54,29 @@ h1{
   	font-size: 40px;
 }
 li{
+	left: 500px;	
 	list-style:none;
 	display: inline-block;
 	padding: 10px;
+	padding-left: 0;
 	color: #57657A;
 	font-weight: 550;
+	margin-right: 15px;
+	padding-right: 0;
+}
+li:nth-child(3){
+	margin-right: 0;
+	padding-right: 0;
 }
 ul{
-	margin-left: 400px;
+	padding-right: 0;
+	padding-left: 0;
+	cursor: pointer;
+	margin-left: 480px;
+	margin-right: 0;
+	width: 328px;
 }
+
 .selectOption{
 	color: #FA5252;
 }
