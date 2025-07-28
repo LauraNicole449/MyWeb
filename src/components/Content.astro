@@ -21,8 +21,8 @@ const currentPath = Astro.url.pathname;
 
 <style>
 article{
-	width: 900px;
-	height: 722px;
+  width: 900px;
+  height: auto; 
 	background-color: white;
   box-shadow: 0px 2px 8px 2px #e1e1e1;
 	border-radius: 20px;
@@ -31,5 +31,15 @@ article{
   font-family: "Poppins";
 }
 
+.content {
+    width: 100%;
+    min-height: 80vh; /* Ajusta esto según lo que necesites */
+    padding: 2rem;
+  }
 
+  @media screen and (max-width: 768px) {
+    .content {
+      padding: 1rem;
+    }
+  }
 </style>
